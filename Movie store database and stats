@@ -1,0 +1,32 @@
+-- Create a store database
+
+CREATE TABLE Movies (Id INTEGER PRIMARY KEY, Name TEXT, Rating TEXT, Price INTEGER, Aisle INTEGER, Quantity INTEGER);
+
+INSERT INTO Movies VALUES (1, "Inception", "PG-13", 15, 2, 8);
+INSERT INTO Movies VALUES (2, "Toy Story", "G", 10, 1, 10);
+INSERT INTO Movies VALUES (3, "Spider-man", "PG-13", 12, 2, 4);
+INSERT INTO Movies VALUES (4, "SHREK", "PG", 10, 3, 12);
+INSERT INTO Movies VALUES (5, "TED", "R", 8, 4, 12);
+INSERT INTO Movies VALUES (6, "DEADPOOL", "R", 12, 4, 8);
+INSERT INTO Movies VALUES (7, "AVATAR", "PG-13", 17, 2, 10);
+INSERT INTO Movies VALUES (8, "JIGSAW", "R", 12, 4, 2);
+INSERT INTO Movies VALUES (9, "GRAVITY", "PG-13", 15, 2, 15);
+INSERT INTO Movies VALUES (10, "Titanic", "PG-13", 15, 2, 5);
+INSERT INTO Movies VALUES (11, "Finding Nemo", "G", 8, 1, 8);
+INSERT INTO Movies VALUES (12, "JOKER", "R", 10, 4, 10);
+INSERT INTO Movies VALUES (13, "The Incredibles", "PG", 12, 3, 4);
+INSERT INTO Movies VALUES (14, "The Lion King", "G", 8, 1, 13);
+INSERT INTO Movies VALUES (15, "The Wolf of Wall Street", "R", 12, 4, 5);
+
+--display the database orederd by price
+SELECT * FROM Movies;
+SELECT * FROM Movies ORDER BY Price;
+
+--Which and where are the items less than $10?
+SELECT * FROM Movies WHERE Price < 10 ORDER BY aisle;
+
+--display the database ordered by rating.
+SELECT* FROM Movies ORDER BY rating;
+
+--What is the total amount of items in the store
+SELECT SUM(Quantity) FROM Movies;
